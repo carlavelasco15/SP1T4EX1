@@ -53,6 +53,43 @@
 
     $emp4 = new Employee("Jordi", 6001);
     $emp4->print();
+    echo "<br>";
+    echo "<br>";
+
+    /* EXERCICI 2 */
+
+    echo "<h5>EXERCICI 2</h5>";
+
+    class Shape {
+        public $width;
+        public $height;
+
+        function __construct($lWidth, $lHeight) {
+            $this->width = $lWidth;
+            $this->height = $lHeight;
+        }
+    }
+
+    class Triangle extends Shape {
+        function area() {
+            $area = ($this->width * $this->height) / 2;
+            echo("<p>L'area d'un triangle amb base $this->width i altura $this->height és de $area.</p>");
+        }
+    }
+
+    class Rectangle extends Shape {
+        function area() {
+            $area = ($this->width * $this->height);
+            echo("<p>L'area d'un rectangle amb base $this->width i altura $this->height és de $area.</p>");
+        }
+    }
+
+    $triangle = new Triangle(50, 30);
+    $triangle->area();
+
+    $rectangle = new Rectangle(50, 30);
+    $rectangle->area();
+
     ?>
 </body>
 </html>
